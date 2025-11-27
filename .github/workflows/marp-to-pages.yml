@@ -53,7 +53,7 @@ jobs:
           <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>著者と深掘るClaude Code×AI駆動開発の最前線</title>
+              <title>「Claude CodeによるAI駆動開発入門」に書けなかったこと</title>
               <style>
                   * {
                       margin: 0;
@@ -126,7 +126,7 @@ jobs:
           </head>
           <body>
               <div class="container">
-                  <h1>著者と深掘る<br>Claude Code×AI駆動開発の最前線</h1>
+                  <h1>「Claude CodeによるAI駆動開発入門」に書けなかったこと</h1>
                   <p>Lancers TechBook#1</p>
                   <div class="slides">
                       <a href="./slides.html" class="slide-link">
