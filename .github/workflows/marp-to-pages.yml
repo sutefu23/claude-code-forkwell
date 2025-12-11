@@ -45,6 +45,15 @@ jobs:
       - name: Build primary.md to HTML
         run: marp primary.md -o dist/primary.html --html --theme-set .marp/themes/
 
+      - name: Build slash_command.md to HTML
+        run: marp slash_command.md -o dist/slash_command.html --html --theme-set .marp/themes/
+
+      - name: Build custom_tools.md to HTML
+        run: marp custom_tools.md -o dist/custom_tools.html --html --theme-set .marp/themes/
+
+      - name: Build context_keep_clean.md to HTML
+        run: marp context_keep_clean.md -o dist/context_keep_clean.html --html --theme-set .marp/themes/
+
       - name: Create index page
         run: |
           cat > dist/index.html << 'EOF'
@@ -134,6 +143,15 @@ jobs:
                       </a>
                       <a href="./primary.html" class="slide-link secondary">
                           📚 Claude Code入門
+                      </a>
+                      <a href="./slash_command.html" class="slide-link">
+                          ⌨️ スラッシュコマンド全件解説
+                      </a>
+                      <a href="./custom_tools.html" class="slide-link secondary">
+                          🔧 カスタム機能群の特徴と使用例
+                      </a>
+                      <a href="./context_keep_clean.html" class="slide-link">
+                          🧹 コンテキストを綺麗に保つ方法
                       </a>
                   </div>
                   <footer>
