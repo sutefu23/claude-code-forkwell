@@ -83,7 +83,7 @@ section{
 - Claude Code のインターフェースや基本操作については割愛します。
 もし基本から知りたい場合はこちら⇨ <a href="./primary.html">入門者用スライド</a>
 
-- 開発のベストプラクティスは非常に難しい！なぜなからコンテキストによるから
+- 開発のベストプラクティスは非常に難しい！なぜなからコンテキストによるから。しかしそうやってここに行き着いた方も多いはず。
 
 
 - これ聞けば最新のアップデート含め、開発で知るべき本質的な話をしたいです。
@@ -104,7 +104,7 @@ section{
 - ややこしいツール群を全部まとめる
 
 ### **セクション2: 最近のアップデートであなたが知るべきこと**
-**Agent Skills, Haiku4.5 、Opus4.5、Claude Code on the Web、（.claude/rules）**
+**Agent Skills、 Haiku4.5・Opus4.5、Claude Code on the Web、（.claude/rules）**
   - AgentSkills ハンズオン
   - Claude Code on the Web (ハンズオン)
 
@@ -369,6 +369,7 @@ section{
 GitHubリポジトリを紐づけたら開始可能。
 
 2.0.45より`&`をつけてプロンプトを送るとClaude Code on the Webにセッションを送れるようになった！
+また`claude --teleport session_abc123`でローカルで再開できる。
 
 Claude Code GitHub Actionsとの違いとメリット
 - セッションとして一つ付きのやり取りが可能
@@ -581,16 +582,21 @@ Claudeに「動作に関連する！」と思わせるしかない。
 ```
 
 ---
-## **おまけ:（非公式）段階的開示**
+# おまけ:（非公式）
+## **1: 段階的開示**
 
 Hyman Layerブログより
 
 あえて@importを使わない方法で必要な時にコンテキストに読み込ませる
-
+これによりファイルやディレクトリベースではなくやろうとしてる事ベースで規約等を読ませられるメリットもある。
 ```
   # テスト規約
   テストを書く際は ./docs/test_define.md を参照してください
 ```
+
+## **2:.cursor/rulesも読んでる可能性**
+
+https://github.com/Piebald-AI/claude-code-system-prompts/blob/main/system-prompts/agent-prompt-claudemd-creation.md
 
 ---
 <!--
@@ -649,7 +655,7 @@ LLMが人間の10倍のスピードでやってくれるが
 - 結果の不確実性<br/>
 - 人間の手がどこまで入る必要があるかの判断<br/>
 - 再現性の担保が難しい<br/>
-### ⇨ コンテキストエンジニアリング、タスクの適切な分割
+### ⇨ コンテキストマネジメント、タスクの適切な分割
   </div>
 </div>
 
@@ -663,7 +669,7 @@ LLMが人間の10倍のスピードでやってくれるが
   </div>
   <div>
 
-暴れ馬を予測可能性の中に閉じ込める
+予測可能性の中に閉じ込める
 
 - Huskeyをまずインストールする<br/>
 - `/sandbox`やDockerで動かす<br/>
