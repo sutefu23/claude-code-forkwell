@@ -126,8 +126,8 @@ jobs:
           </head>
           <body>
               <div class="container">
-                  <h1>「Claude CodeによるAI駆動開発入門」に書けなかったコト</h1>
-                  <p>Lancers TechBook#1</p>
+                  <h1>Claude Codeであなたが知るべきこと</h1>
+                  <p>Forkwell by Grooves</p>
                   <div class="slides">
                       <a href="./slides.html" class="slide-link">
                           📊 メインスライド
@@ -137,7 +137,7 @@ jobs:
                       </a>
                   </div>
                   <footer>
-                      ランサーズ テックエージェント様主催
+                      Forkwell by Grooves様主催
                   </footer>
               </div>
           </body>

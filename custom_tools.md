@@ -1,15 +1,33 @@
+---
+marp: true
+theme: kouen
+class: lead
+paginate: true
+backgroundColor: white
+header: "**Claude CodeによるAI駆動開発入門と実践**"
+---
+<script src="https://cdn.tailwindcss.com/"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } }</script>
 
-# 混乱しがちな機能群の特徴と使用例まとめ
+<style scoped>
+section{
+  text-align:center;
+}
+</style>
+
+
+# カスタム機能群の特徴と使用例まとめ
 
 
 ---
 
 ## **どんなものがあるか**
 
-- Agent Skills　⇦ 説明済み
 - カスタムスラッシュコマンド
 - サブエージェント
 - Hooks
+- MCPサーバー
+- Agent Skills
 
 結論：
 基本的に手順があるものはSkills、専門性が高いものはサブエージェント、MCPにしかない機能はMCPサーバー、確定的な動作をさせたい時はHooks、特定の指示のまとまりを任意のタイミングで使いたい時はスラッシュコマンド
@@ -102,13 +120,13 @@ section {
 
 ## **まとめ**
 
-| 機能 | コンテキスト占有 | 動作タイミング | 保存場所 |
-|------|-----------------|--------------|----------|
-| **スラッシュコマンド** | なし（呼び出し時のみ） | 明示的なコマンド実行時（/command-name） | `.claude/commands/` |
-| **サブエージェント** | あり | 明示的な呼び出し or 自動 | `.claude/agents/` |
-| **Hooks** | なし（settings.json） | イベント駆動 | `.claude/settings.json` |
-| **MCPサーバー** | あり（ツール定義） | 常時接続・必要時にツール呼び出し | `.mcp.json` or `~/.claude.json` |
-| **Agent Skills** | 最小限（メタデータのみ） | 自然言語で自動検出 | `.claude/skills/`  |
+| 機能 | コンテキスト占有 | 動作タイミング | 発火 | 概略 |
+|------|-----------------|--------------|----|---------|
+| **スラッシュコマンド** | 小 | 明示的なコマンド実行時 | 確定的 | プロンプトをまとめておける |
+| **サブエージェント** | あり | 明示的な呼び出し or 自動 | 確定的　or 確率的 | 特定の専門家を作れる |
+| **Hooks** | なし | イベント時 | 確定的 | コマンドを実行できる（一部プロンプト） |
+| **MCPサーバー** | やや大 | 常時接続・必要時にツール呼び出し　| 確定的 | 様々な機能と繋げられる |
+| **Agent Skills** | 極小 | 自然言語で自動検出 | 確定的だがやや確率的 | 手順を与えられる  |
 
 
 ---
@@ -117,6 +135,4 @@ section {
 
 Skills explained: How Skills compares to prompts, Projects, MCP, and subagents
 https://www.claude.com/blog/skills-explained
-
----
 
